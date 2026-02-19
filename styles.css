@@ -1795,3 +1795,10 @@ section {
   fill: #5A3E2B;
   color: #5A3E2B;
 }
+
+.linkedin-contact-card:hover {
+  background: #e8dbc6;
+  border-color: #b08a5b;
+  box-shadow: 0 8px 20px rgba(90, 62, 43, 0.15);
+  transform: translateY(-2px);
+}

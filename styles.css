@@ -1752,3 +1752,46 @@ section {
   transform: translateY(-2px);
   box-shadow: 0 14px 30px rgba(107, 74, 45, 0.24);
 }
+
+/* Unified beige-brown hover states */
+.chip,
+.skill-card,
+.project-card,
+.contact-card,
+.skills-pill,
+.skills-tab {
+  transition: all 0.3s ease;
+}
+
+.chip:hover,
+.skills-pill:hover,
+.skills-tab:hover {
+  background: #E8D8C3;
+  color: #5A3E2B;
+  border-color: #C6A98B;
+  box-shadow: 0 8px 20px rgba(90, 62, 43, 0.15);
+  transform: translateY(-2px);
+}
+
+.skill-card:hover,
+.project-card:hover,
+.contact-card:hover {
+  background: linear-gradient(180deg, rgba(232, 216, 195, 0.9), rgba(244, 230, 207, 0.72));
+  border-color: #C6A98B;
+  box-shadow: 0 8px 20px rgba(90, 62, 43, 0.15);
+  transform: translateY(-2px);
+}
+
+.contact-card:hover .contact-icon,
+.project-card:hover .project-icon {
+  background: rgba(255, 250, 242, 0.95);
+  box-shadow: 0 8px 20px rgba(90, 62, 43, 0.15);
+}
+
+.contact-card:hover .contact-icon svg,
+.project-card:hover .project-icon svg,
+.skills-tab:hover .tab-icon,
+.skills-pill:hover .tab-icon {
+  fill: #5A3E2B;
+  color: #5A3E2B;
+}

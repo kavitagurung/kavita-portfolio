@@ -30,11 +30,6 @@ a {
 }
 
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
   padding: 24px 80px;
   background: transparent;
 }
@@ -91,12 +86,8 @@ a {
   width: 100%;
 }
 
-main {
-  padding-top: 90px;
-}
-
 .hero {
-  min-height: calc(100vh - 90px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -121,61 +121,23 @@ if (skillsCardsData) {
 }
 
 if (contactForm && contactStatus) {
-  contactForm.addEventListener("submit", async (event) => {
+  contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const submitButton = contactForm.querySelector("button[type='submit']");
     const formData = new FormData(contactForm);
-    const action = contactForm.getAttribute("action") || "";
-    const isConfigured = action && !action.includes("XXXXXXX");
+    const name = (formData.get("name") || "").toString().trim();
+    const email = (formData.get("email") || "").toString().trim();
+    const reason = (formData.get("reason") || "").toString().trim();
+    const message = (formData.get("message") || "").toString().trim();
+    const subject = encodeURIComponent("Portfolio contact: " + (reason || "General"));
+    const body = encodeURIComponent(
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n" +
+      "Reason: " + reason + "\n\n" +
+      message
+    );
 
-    if (submitButton) {
-      submitButton.disabled = true;
-    }
-
-    if (!isConfigured) {
-      const name = (formData.get("name") || "").toString().trim();
-      const email = (formData.get("email") || "").toString().trim();
-      const reason = (formData.get("reason") || "").toString().trim();
-      const message = (formData.get("message") || "").toString().trim();
-      const subject = encodeURIComponent("Portfolio Contact: " + (reason || "General"));
-      const body = encodeURIComponent(
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n" +
-        "Reason: " + reason + "\n\n" +
-        message
-      );
-
-      window.location.href = "mailto:kavitagurung033@gmail.com?subject=" + subject + "&body=" + body;
-      contactForm.reset();
-      contactStatus.textContent = "Thanks — I'll reply soon.";
-      if (submitButton) {
-        submitButton.disabled = false;
-      }
-      return;
-    }
-
-    try {
-      const response = await fetch(action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json"
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error("Submission failed");
-      }
-
-      contactForm.reset();
-      contactStatus.textContent = "Thanks — I'll reply soon.";
-    } catch (error) {
-      contactStatus.textContent = "Message could not be sent. Please try again.";
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-      }
-    }
+    window.location.href = "mailto:kavitagurung033@gmail.com?subject=" + subject + "&body=" + body;
+    contactStatus.textContent = "Your email app should open with a pre-filled message.";
   });
 }

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClauseGraph RAG | Kavita Gurung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section class="section case-study-page">
+      <div class="section-header">
+        <p class="section-kicker">CASE STUDY</p>
+        <h3>ClauseGraph RAG</h3>
+        <span class="section-underline"></span>
+        <p class="section-subtitle">A local document intelligence assistant for source-grounded questions over contracts, policies, and internal knowledge bases.</p>
+      </div>
+
+      <div class="case-study-grid">
+        <article class="project-card"><h4>Problem</h4><p>Finding a reliable answer across long documents is slow when users cannot easily trace an answer back to its source.</p></article>
+        <article class="project-card"><h4>Solution</h4><p>Built a local RAG application that retrieves relevant document passages and generates answers with the matching source chunks visible in the interface.</p></article>
+        <article class="project-card"><h4>Technical approach</h4><p>Implemented a Python Flask backend with Ollama embeddings and chat models, plus a browser-based interface for document and query workflows.</p></article>
+        <article class="project-card"><h4>Document workflow</h4><p>Supports PDF, TXT, and Markdown uploads, semantic indexing, queries across all files or a chosen document, and removal of files with their indexed vectors.</p></article>
+        <article class="project-card"><h4>Product decisions</h4><p>Kept the system local-first and made retrieved evidence inspectable, so users can assess the basis for an answer rather than treating it as a black box.</p></article>
+        <article class="project-card case-study-screens"><h4>Explore the project</h4><p>The repository includes the Flask API, browser UI, local index structure, and regression tests for core document handling flows.</p><a class="project-link" href="https://github.com/kavitagurung/clausegraph-rag-ollama" target="_blank" rel="noreferrer">View ClauseGraph on GitHub <span aria-hidden="true">↗</span></a></article>
+      </div>
+
+      <a class="project-button" href="index.html#projects">Back to Projects</a>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

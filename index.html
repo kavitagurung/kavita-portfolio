@@ -17,8 +17,14 @@
         <span class="brand-first">Kavita</span>
         <span class="brand-last">Gurung</span>
       </a>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+      <div id="primary-nav" class="nav-links">
         <a href="#home">Home</a>
+        <a href="#enterprise">Enterprise</a>
+        <a href="#beyond-pm">Beyond PM</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -32,15 +38,18 @@
   <main id="main-content">
     <section id="home" class="hero">
       <div class="hero-content">
+        <p class="hero-eyebrow"><span></span> Building useful AI products</p>
         <h1>
-          <span class="hero-greeting">Hi, I'm</span>
-          <span class="hero-name">Kavita Gurung</span>
+          <span class="hero-greeting">Hi, I’m</span>
+          <span class="hero-name">Kavita<br />Gurung.</span>
         </h1>
-        <h2>Technical Product Manager</h2>
-        <p class="hero-description">
-          Technical product manager building enterprise AI automation and analytics products from
-          roadmap definition through client validation.
-        </p>
+        <h2>Technical Product Manager building <em>AI products, enterprise SaaS, and intelligent automation.</em></h2>
+        <p class="hero-personality">Accidentally became a PM. Stayed because apparently asking too many questions, caring deeply, and wanting to fix everything is a job.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="btn-secondary" href="#contact">Let’s connect <span aria-hidden="true">↓</span></a>
+          <a class="btn-text" href="#beyond-pm">Meet the human behind the roadmap <span aria-hidden="true">↓</span></a>
+        </div>
         <div class="contact-list">
           <div class="contact-item">
             <span class="icon" aria-hidden="true">
@@ -73,31 +82,80 @@
         </div>
       </div>
       <div class="hero-visual">
+        <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+        <div class="visual-orbit orbit-two" aria-hidden="true"></div>
         <div class="photo-frame">
           <img src="profile.jpg" alt="Portrait of Kavita Gurung" />
         </div>
-        <div class="badge">TPM</div>
+        <div class="badge"><span>TPM</span><small>AI / SaaS</small></div>
+        <div class="hero-note"><span class="note-dot" aria-hidden="true"></span><span>Open to new product challenges</span></div>
+      </div>
+      <div class="hero-stats" aria-label="Product focus areas">
+        <div class="metric-highlight"><strong>6+ years</strong><span>Product experience</span></div>
+        <div class="metric-highlight"><strong>10+ clients</strong><span>Served across enterprise work</span></div>
+        <div><strong>AI SaaS</strong><span>Product focus</span></div>
+      </div>
+    </section>
+
+    <section id="enterprise" class="enterprise-section" aria-labelledby="enterprise-title">
+      <div class="enterprise-intro">
+        <p class="section-kicker">ENTERPRISE EXPERIENCE</p>
+        <h3 id="enterprise-title">Enterprise Experience Across</h3>
+        <p>A cross-industry perspective shaped by complex products, data, and customer workflows.</p>
+      </div>
+      <div class="company-logos" aria-label="Organizations represented in Kavita's enterprise experience">
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=jhu.edu&amp;sz=128" alt="" /><strong>Johns<br />Hopkins</strong></div>
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=paytm.com&amp;sz=128" alt="" /><strong>Paytm</strong></div>
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=bsnl.co.in&amp;sz=128" alt="" /><strong>BSNL</strong></div>
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=coupa.com&amp;sz=128" alt="" /><strong>Coupa</strong></div>
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=cadbury.co.uk&amp;sz=128" alt="" /><strong>Cadbury</strong></div>
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=servicenow.com&amp;sz=128" alt="" /><strong>ServiceNow</strong></div>
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=workday.com&amp;sz=128" alt="" /><strong>Workday</strong></div>
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=sap.com&amp;sz=128" alt="" /><strong>SAP</strong></div>
+        <div class="company-logo"><img class="company-logo-image" src="https://www.google.com/s2/favicons?domain=salesforce.com&amp;sz=128" alt="" /><strong>Salesforce</strong></div>
+      </div>
+    </section>
+
+    <section class="industry-section" aria-labelledby="industry-title">
+      <p class="section-kicker">INDUSTRY EXPERIENCE</p>
+      <h3 id="industry-title">Products shaped across complex industries.</h3>
+      <div class="industry-list" aria-label="Industries">
+        <span>Healthcare</span>
+        <span>FinTech</span>
+        <span>Telecom</span>
+        <span>Enterprise SaaS</span>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="section-header">
-        <h3>About</h3>
+        <h3>I build products for a living. I ask questions for fun.</h3>
         <span class="section-underline"></span>
         <p class="section-subtitle">Product focus, industry experience, and what I love to build.</p>
       </div>
-      <p>
-        Hi, I'm Kavita Gurung — a Product Manager specializing in AI-driven SaaS and intelligent
-        automation. I turn complex business problems into simple, scalable products. Over the last
-        5 years, I've built and shaped solutions across fintech, healthtech, and automation — from
-        defining product vision and writing roadmaps to designing user workflows and leading
-        cross-functional teams.
-        <br /><br />
-        Currently, I'm leading product for a next-gen AI test automation platform, where I work at
-        the intersection of computer vision, data intelligence, and enterprise automation. I love
-        solving ambiguous problems, crafting clean user experiences, and bringing impactful ideas to
-        life from zero to launch.
-      </p>
+      <div class="about-layout">
+        <p>
+          Hi, I'm Kavita Gurung — a Product Manager specializing in AI-driven SaaS and intelligent
+          automation. I turn complex business problems into simple, scalable products. Over the last
+          5 years, I've built and shaped solutions across fintech, healthtech, and automation — from
+          defining product vision and writing roadmaps to designing user workflows and leading
+          cross-functional teams.
+          <br /><br />
+          Currently, I'm leading product for a next-gen AI test automation platform, where I work at
+          the intersection of computer vision, data intelligence, and enterprise automation. I love
+          solving ambiguous problems, crafting clean user experiences, and bringing impactful ideas to
+          life from zero to launch.
+        </p>
+        <aside class="principles-card" aria-label="Product approach">
+          <p class="card-label">MY PRODUCT LENS</p>
+          <ol>
+            <li><b>01</b><span><strong>Clarify</strong> the real problem before choosing a solution.</span></li>
+            <li><b>02</b><span><strong>Validate</strong> early with customers, data, and prototypes.</span></li>
+            <li><b>03</b><span><strong>Deliver</strong> focused work with teams that can execute.</span></li>
+          </ol>
+        </aside>
+      </div>
+      <a class="about-personal-link" href="#beyond-pm">Want the less professional introduction? <span aria-hidden="true">→</span></a>
     </section>
 
     <section id="experience" class="section">
@@ -111,14 +169,14 @@
           <span class="timeline-dot"></span>
           <div class="timeline-content">
             <p class="timeline-date">01/2025 – Present</p>
-            <h4>Product Manager</h4>
+            <h4>Associate Product Manager</h4>
             <p class="timeline-company">Ziplyne | Remote</p>
             <ul>
-              <li>Defined AI roadmap for test automation, including Computer Vision, self-healing scripts, and data-driven prioritization.</li>
-              <li>Owned end-to-end lifecycle of an AI-powered test automation platform from scratch to client POCs.</li>
-              <li>Designed and drove the roadmap for core modules (Recorder, Player, Scheduler, Data-Driven Testing).</li>
-              <li>Applied Computer Vision (CV) to detect UI changes, reducing test flakiness and maintenance overhead.</li>
-              <li>Collaborated closely with engineering and client teams to validate features and improve adoption.</li>
+              <li>Co-own product strategy and execution for ZipRPA, an AI-powered enterprise test-automation platform.</li>
+              <li>Lead discovery, PRDs, roadmap prioritization, POCs, and customer onboarding across the product lifecycle.</li>
+              <li>Defined AI Agent Testing and API Testing V2, including response benchmarks, degradation testing, and CI/CD quality gates.</li>
+              <li>Designed Data Masking with dynamic fields, role-based visibility, and GDPR-ready security, reducing sensitive-data exposure risk by an estimated 80%.</li>
+              <li>Helped reduce manual Workday regression testing from about one hour to two or three minutes for enterprise customers.</li>
             </ul>
           </div>
         </div>
@@ -129,10 +187,10 @@
             <h4>Product Analyst</h4>
             <p class="timeline-company">Indegene | Bangalore, India</p>
             <ul>
-              <li>Collaborated with PMs, designers, and engineers to define product roadmaps.</li>
-              <li>Conducted market research and competitor analysis leading to 3 new features.</li>
-              <li>Gathered stakeholder requirements and translated them into product plans.</li>
-              <li>Designed and refined wireframes with UX/UI teams.</li>
+              <li>Supported enterprise healthcare SaaS products for global pharmaceutical and life-sciences organizations in regulated environments.</li>
+              <li>Led discovery, stakeholder interviews, roadmap planning, PRD creation, and cross-functional execution for collaboration and workflow platforms.</li>
+              <li>Conducted market research, workflow analysis, competitor benchmarking, and customer-requirement discovery to identify product opportunities.</li>
+              <li>Designed RAG-based conversational AI experiences with prompt engineering, conversational UX, and structured AI-generated responses.</li>
             </ul>
           </div>
         </div>
@@ -143,11 +201,11 @@
             <h4>Associate Product Manager (Product Analyst)</h4>
             <p class="timeline-company">Paytm | Noida, India</p>
             <ul>
-              <li>Led product strategy, roadmap planning, and competitive analysis.</li>
-              <li>Built churn prediction, recommendation, and sentiment analysis modules.</li>
-              <li>Designed analytics dashboards saving users 5–10 hours/week.</li>
-              <li>Led wireframing and UI/UX ideation using Figma, Whimsical, and Balsamiq.</li>
-              <li>Worked with cross-functional teams on real-time analytics platforms.</li>
+              <li>Led product strategy, roadmaps, requirements, and feature development for a customer analytics and marketing-intelligence platform.</li>
+              <li>Defined analytics modules spanning funnels, cohorts, retention, conversion, journeys, acquisition, referral tracking, sentiment, and segmentation.</li>
+              <li>Designed campaign-impact analytics for SMS, email, push, WhatsApp, and in-app engagement.</li>
+              <li>Contributed to AI/ML analytics initiatives including churn prediction, recommendations, sentiment analytics, clustering, and behavioral-pattern discovery.</li>
+              <li>Partnered with engineering, analytics, and design on real-time dashboards, KPI frameworks, event streaming, and data pipelines.</li>
             </ul>
           </div>
         </div>
@@ -158,23 +216,25 @@
             <h4>Associate Business Analyst</h4>
             <p class="timeline-company">Robofied | Gurugram</p>
             <ul>
-              <li>Conducted market research and competitor analysis.</li>
-              <li>Managed full product lifecycle from ideation to launch.</li>
-              <li>Coordinated with engineering, QA, and UI/UX teams.</li>
-              <li>Tracked project progress using JIRA, Trello, and Notion.</li>
+              <li>Worked across AI-powered enterprise products in NLP, speech recognition, machine learning, predictive analytics, computer vision, and process automation.</li>
+              <li>Contributed to an employee-sentiment intelligence platform using NLP for feedback categorization, engagement measurement, and workforce insights.</li>
+              <li>Supported VoiceNet initiatives for speech recognition, voice-driven workflows, conversational AI, and machine-learning-powered language processing.</li>
+              <li>Helped design a Homelessness Management System for US organizations, covering case management, beneficiary tracking, reporting, and decision support.</li>
+              <li>Created PRDs, user stories, workflow diagrams, acceptance criteria, and release documentation for Agile product delivery.</li>
             </ul>
           </div>
         </div>
         <div class="timeline-item">
           <span class="timeline-dot"></span>
           <div class="timeline-content">
-            <p class="timeline-date">04/2021 – 08/2021</p>
+            <p class="timeline-date">07/2020 – 08/2021</p>
             <h4>Project Management Intern</h4>
             <p class="timeline-company">Robofied | Gurugram, India</p>
             <ul>
-              <li>Managed client and stakeholder communication.</li>
-              <li>Worked in Agile sprints for multiple projects.</li>
-              <li>Supported project planning and execution.</li>
+              <li>Coordinated cross-functional projects with product, engineering, design, and business stakeholders.</li>
+              <li>Supported client meetings, requirement gathering, sprint tracking, task prioritization, and Agile delivery documentation.</li>
+              <li>Managed client communications, project updates, action items, and stakeholder engagement across delivery cycles.</li>
+              <li>Contributed to business operations, digital marketing, talent-acquisition coordination, and strategic projects.</li>
             </ul>
           </div>
         </div>
@@ -213,8 +273,50 @@
         <span class="section-underline"></span>
         <p class="section-subtitle">End-to-end AI/ML product initiatives covering strategy, architecture, delivery, and measurable outcomes.</p>
       </div>
+      <div class="project-filters" role="toolbar" aria-label="Filter case studies">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+        <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI & automation</button>
+        <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Data products</button>
+        <button class="filter-button" type="button" data-filter="strategy" aria-pressed="false">Product strategy</button>
+      </div>
       <div class="projects-grid">
-        <article class="project-card">
+        <article class="project-card" data-category="strategy">
+          <span class="project-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+              <path d="M4 4h7v7H4V4Zm2 2v3h3V6H6Zm7-2h7v7h-7V4Zm2 2v3h3V6h-3ZM4 13h7v7H4v-7Zm2 2v3h3v-3H6Zm10-2h4v2h-4v-2Zm0 4h4v2h-4v-2Z"/>
+            </svg>
+          </span>
+          <h4>TestOrbit</h4>
+          <p>An evidence-led market intelligence workspace for the test automation industry.</p>
+          <ul class="project-list">
+            <li><strong>Release tracking:</strong> monitors product-release signals across Workday, ServiceNow, SAP SuccessFactors, and Coupa.</li>
+            <li><strong>Competitor tracking:</strong> watches public updates from 40 configured test-automation competitors.</li>
+            <li>Separates verified official updates from marketing claims, helping teams distinguish fact from inference.</li>
+          </ul>
+          <div class="project-actions">
+            <a class="project-button" href="case-study-6.html">View Case Study</a>
+            <a class="project-link" href="https://kavitagurung.github.io/TestOrbit/" target="_blank" rel="noreferrer">Open TestOrbit <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="project-card" data-category="ai">
+          <span class="project-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+              <path d="M6 2h8l4 4v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Zm7 2v3h3l-3-3Zm-5 8h8v2H8v-2Zm0 4h8v2H8v-2Zm0-8h3v2H8V8Z"/>
+            </svg>
+          </span>
+          <h4>ClauseGraph RAG</h4>
+          <p>A source-grounded document intelligence assistant for contracts, policy files, and internal knowledge bases.</p>
+          <ul class="project-list">
+            <li>Built a Flask backend for document upload, indexing, retrieval, and source-backed Q&amp;A.</li>
+            <li>Used local Ollama embeddings to search PDF, TXT, and Markdown document libraries.</li>
+            <li>Designed a browser workflow to inspect retrieved source chunks and manage indexed files.</li>
+          </ul>
+          <div class="project-actions">
+            <a class="project-button" href="case-study-5.html">View Case Study</a>
+            <a class="project-link" href="https://github.com/kavitagurung/clausegraph-rag-ollama" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="project-card" data-category="ai">
           <span class="project-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" role="img" focusable="false">
               <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h4A1.5 1.5 0 0 1 11 5.5v4A1.5 1.5 0 0 1 9.5 11h-4A1.5 1.5 0 0 1 4 9.5v-4Zm9 0A1.5 1.5 0 0 1 14.5 4h4A1.5 1.5 0 0 1 20 5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4A1.5 1.5 0 0 1 13 9.5v-4ZM4 14.5A1.5 1.5 0 0 1 5.5 13h4a1.5 1.5 0 0 1 1.5 1.5v4A1.5 1.5 0 0 1 9.5 20h-4A1.5 1.5 0 0 1 4 18.5v-4Zm10.2.2 1.8 1.8 3.8-3.8 1.2 1.2-5 5-3-3 1.2-1.2Z"/>
@@ -229,7 +331,7 @@
           </ul>
           <a class="project-button" href="case-study-1.html">View Case Study</a>
         </article>
-        <article class="project-card">
+        <article class="project-card" data-category="data">
           <span class="project-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" role="img" focusable="false">
               <path d="M12 3a8.9 8.9 0 0 1 8.7 7h-2A7 7 0 0 0 5.3 10h-2A8.9 8.9 0 0 1 12 3Zm-6.7 9h2A4.7 4.7 0 0 0 12 16.7a4.7 4.7 0 0 0 4.7-4.7h2A6.7 6.7 0 0 1 12 18.7 6.7 6.7 0 0 1 5.3 12Zm5.7-2h2v6h-2v-6Zm6.6 9.4 1.4 1.4-3.5 3.5-2.1-2.1 1.4-1.4.7.7 2.1-2.1Z"/>
@@ -244,7 +346,7 @@
           </ul>
           <a class="project-button" href="case-study-2.html">View Case Study</a>
         </article>
-        <article class="project-card">
+        <article class="project-card" data-category="data">
           <span class="project-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" role="img" focusable="false">
               <path d="M5 4h14a1 1 0 0 1 1 1v9h-2V6H6v12h6v2H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm8.5 8H22v8h-8.5v-8Zm1.5 1.5v5h5v-5h-5Zm-7-1.5h4v2H8v-2Zm0 4h4v2H8v-2Zm8.9-7.7 1.4 1.4-2.3 2.3-1.4-1.4 2.3-2.3Z"/>
@@ -259,7 +361,7 @@
           </ul>
           <a class="project-button" href="case-study-3.html">View Case Study</a>
         </article>
-        <article class="project-card">
+        <article class="project-card" data-category="strategy">
           <span class="project-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" role="img" focusable="false">
               <path d="M12 3 2 8l10 5 8.5-4.2V16h2V8L12 3Zm-8 8.8V16l8 4 8-4v-4.2l-8 4-8-4Z"/>
@@ -277,17 +379,27 @@
       </div>
     </section>
 
+    <section id="beyond-pm" class="beyond-pm" aria-labelledby="beyond-pm-title">
+      <div class="personal-transition">
+        <p class="section-kicker">SO THAT'S THE PROFESSIONAL VERSION.</p>
+        <h3 id="beyond-pm-title">But a résumé is a terrible way to know someone.</h3>
+        <p>You’ve seen the work experience, projects, and all the responsible adult stuff. Here’s a slightly better introduction.</p>
+        <a class="btn-primary" href="#mountains">Meet Kavita <span aria-hidden="true">↓</span></a>
+      </div>
+      <div id="personal-story-root"></div>
+    </section>
+
     <section id="contact" class="contact">
       <div class="contact-header section-header">
         <p class="section-kicker">CONTACT</p>
-        <h3>Let’s build something meaningful.</h3>
+        <h3>You made it all the way here?</h3>
         <span class="section-underline"></span>
-        <p class="section-subtitle">If you have an AI/ML idea, collaboration, or product role, send a message — I reply within 24–48 hours.</p>
+        <p class="section-subtitle">You now know what I build, that I ask too many questions, and that pink was non-negotiable. We should probably talk.</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-options">
-          <a class="contact-card" href="mailto:kavitagurung033@gmail.com">
+          <a class="contact-card" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kavitagurung033%40gmail.com" target="_blank" rel="noreferrer">
             <span class="contact-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img" focusable="false">
                 <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-11Zm2.2-.5 5.8 4.3 5.8-4.3H6.2Zm11.8 2.8-5.6 4.1a1 1 0 0 1-1.2 0L5.6 8.8v8.7c0 .6.5 1 1.1 1h10.6c.6 0 1.1-.4 1.1-1V8.8Z"/>
@@ -364,8 +476,8 @@
             <textarea id="contact-message" name="message" class="textarea" rows="5" required></textarea>
           </div>
 
-          <button type="submit" class="btn-primary">Open Email Draft</button>
-          <p class="privacy-note">This opens a pre-filled email to Kavita. No form data is stored on this site.</p>
+          <button type="submit" class="btn-primary">Say Hi <span aria-hidden="true">→</span></button>
+          <p class="privacy-note">This opens a pre-filled Gmail draft to Kavita. No form data is stored on this site.</p>
           <p id="contact-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -376,6 +488,7 @@
     <p>© 2026 Kavita Gurung. All rights reserved.</p>
   </footer>
 
+  <script src="personal-data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

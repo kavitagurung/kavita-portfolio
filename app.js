@@ -21,15 +21,20 @@ let drag = null;
 let suppressClickUntil = 0;
 
 function cardVisual(card) {
-  if (card.kind === "experience") return `<div class="deck-card__visual deck-card__visual--experience" aria-hidden="true"><span>PRODUCT</span><i></i><span>DISCOVERY</span><i></i><span>DELIVERY</span><i></i><span>LEARNING</span></div>`;
-  if (card.kind === "work") return `<div class="deck-card__visual deck-card__visual--flow" aria-hidden="true"><div class="flow-line"><span>CAPTURE</span><i></i><span>RUN</span></div><div class="flow-line"><span>OBSERVE</span><i></i><span>DECIDE</span></div><div class="flow-line"><span>VALIDATE</span><i></i><span>IMPROVE</span></div></div>`;
+  if (card.kind === "experience") return `<div class="deck-card__visual deck-card__visual--experience" aria-hidden="true"><i></i><i></i><i></i></div>`;
+  if (card.kind === "work") return `<div class="deck-card__visual deck-card__visual--flow" aria-hidden="true"><div class="flow-line"><i></i></div><div class="flow-line"><i></i></div><div class="flow-line"><i></i></div></div>`;
   return `<div class="deck-card__visual"><img src="${card.image}" alt="${card.alt}" /></div>`;
+}
+function metadata(card) {
+  if (card.kind === "experience") return ["Product", "Discovery", "Delivery", "Learning"];
+  if (card.kind === "work") return ["AI", "Enterprise systems", "Workflow design"];
+  return ["Travel", "Culture", "Curiosity"];
 }
 function renderDeck() {
   const deck = $("#deck");
   deck.innerHTML = cards.map((card, index) => {
     const offset = (index - activeIndex + cards.length) % cards.length;
-    return `<article class="deck-card deck-card--${card.kind} ${offset === 0 ? "is-active" : ""}" data-index="${index}" style="--x:${offset * 14}px;--y:${offset * 11}px;--r:${offset * 2.1 - 2}deg;z-index:${cards.length - offset}" tabindex="${offset === 0 ? "0" : "-1"}" role="button" aria-label="${card.label}. ${card.caption}. Press Enter to open."><div class="deck-card__top"><span>${String(index + 1).padStart(2, "0")}</span><span class="deck-card__number">${card.label}</span></div>${cardVisual(card)}<span class="open-label" aria-hidden="true">Open ↗</span><h2 class="deck-card__title">${card.label === "SELECTED WORK" ? "Selected <em>work</em>" : card.label[0] + card.label.slice(1).toLowerCase()}</h2><p class="deck-card__caption">${card.caption}</p></article>`;
+    return `<article class="deck-card card-surface deck-card--${card.kind} ${offset === 0 ? "is-active" : ""}" data-index="${index}" style="--x:${offset * 14}px;--y:${offset * 11}px;--r:${offset * 2.1 - 2}deg;z-index:${cards.length - offset}" tabindex="${offset === 0 ? "0" : "-1"}" role="button" aria-label="${card.label}. ${card.caption}. Press Enter to open.">${cardVisual(card)}<span class="card-number">${String(index + 1).padStart(2, "0")}</span><header class="card-header"><span class="card-category">${card.label}</span><span class="card-open" aria-hidden="true">Open ↗</span></header><h2 class="card-title">${card.label === "SELECTED WORK" ? "Selected <em>work</em>" : card.label[0] + card.label.slice(1).toLowerCase()}</h2><div class="card-metadata">${metadata(card).map((item) => `<span class="card-metadata-item">${item}</span>`).join("")}</div><footer class="card-summary"><p>${card.caption}</p></footer></article>`;
   }).join("");
   $("#deck-count").textContent = `${String(activeIndex + 1).padStart(2, "0")} / 03`;
   bindCards();
